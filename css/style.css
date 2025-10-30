@@ -16,9 +16,8 @@ body {
   flex-direction: column;
   font-family: Arial, sans-serif;
 
-  /* white with a soft blue tint */
-  background-color: #f4f8ff; 
-  /* this is a soft icy-blue white */
+  /* Benjamin Moore 2066-70 inspired */
+  background-color: #DCE7F3;
 }
 
 /* Header */
