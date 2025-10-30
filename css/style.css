@@ -47,13 +47,31 @@ header {
   border-radius: 50%;
 }
 
-/* Toolbar */
+/* Navbar link style */
 #toolbar {
-  background-color: #6b6b6b;
-  padding: 10px 0;
-  display: flex;
-  justify-content: space-around;
+  background-color: #3e3d3d; /* dark gray */
 }
+
+
+#toolbar .nav-item {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, color 0.25s ease;
+  font-weight: 500;
+}
+
+/* Hover = soft box highlight */
+#toolbar .nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.15); /* faint white box */
+}
+
+/* Active tab style */
+#toolbar .active {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 
 #toolbar button {
   background-color: #ffffff;
@@ -84,7 +102,7 @@ main {
 
 /* Footer */
 footer {
-  background-color: #000000;
+  background-color: #3e3d3d; /* dark gray */
   color: white;
   padding: 10px 15px;
   font-size: 14px;
