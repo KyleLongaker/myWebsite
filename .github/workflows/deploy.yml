@@ -21,4 +21,6 @@ jobs:
           REMOTE_USER: ${{ secrets.SSH_USER }}
           SOURCE: "./"
           TARGET: "/home2/bdxabfmy/public_html"
+          ARGS: "-rlgoDzvcO --delete"
+          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PreferredAuthentications=publickey -o PubkeyAuthentication=yes"
           EXCLUDE: ".git/, .github/"
