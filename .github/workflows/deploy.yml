@@ -1,0 +1,24 @@
+name: Deploy to Bluehost
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy files to Bluehost via SSH
+        uses: easingthemes/ssh-deploy@v4
+        with:
+          server: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          local-path: ./
+          remote-path: /home2/bdxabfmy/public_html
+          exclude: |
+            .git/
+            .github/
