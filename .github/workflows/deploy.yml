@@ -13,14 +13,12 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Deploy to Bluehost
+      - name: Deploy files to Bluehost via SSH
         uses: easingthemes/ssh-deploy@v4
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.SSH_HOST }}
           REMOTE_USER: ${{ secrets.SSH_USER }}
-          REMOTE_PORT: 22
           SOURCE: "./"
           TARGET: "/home2/bdxabfmy/public_html"
-        with:
-          ARGS: "-avz --delete"
+          EXCLUDE: ".git/, .github/"
