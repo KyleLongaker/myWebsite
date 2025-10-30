@@ -1,0 +1,27 @@
+name: Deploy to Bluehost
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy files to Bluehost via SSH
+        uses: easingthemes/ssh-deploy@v4
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: 162.241.224.161
+          REMOTE_USER: bdxabfmy
+          SOURCE: "./"
+          TARGET: "/home2/bdxabfmy/public_html"
+          ARGS: "-rlgoDzvcO --delete"
+          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no"
+          EXCLUDE: ".git/, .github/"
