@@ -17,11 +17,10 @@ jobs:
       - name: Deploy files to Bluehost via SSH
         uses: easingthemes/ssh-deploy@v4
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          SOURCE: "./"
-          TARGET: "/home2/bdxabfmy/public_html"
-          ARGS: "-rlgoDzvcO --delete"
-          SSH_CMD_ARGS: "-o StrictHostKeyChecking=no -o PreferredAuthentications=publickey -o PubkeyAuthentication=yes"
-          EXCLUDE: ".git/, .github/"
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          remote-user: bdxabfmy
+          remote-host: 162.241.224.161
+          remote-path: "/home2/bdxabfmy/public_html"
+          local-path: "./"
+          args: "-rlgoDzvcO --delete"
+          exclude: ".git/, .github/"
