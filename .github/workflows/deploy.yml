@@ -16,11 +16,9 @@ jobs:
       - name: Deploy files to Bluehost via SSH
         uses: easingthemes/ssh-deploy@v4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-          remote-host: ${{ secrets.SSH_HOST }}
-          remote-user: ${{ secrets.SSH_USER }}
-          local-path: "./"
-          remote-path: "/home2/bdxabfmy/public_html"
-          exclude: |
-            .git/
-            .github/
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          SOURCE: "./"
+          TARGET: "/home2/bdxabfmy/public_html"
+          EXCLUDE: ".git/, .github/"
