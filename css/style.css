@@ -1,4 +1,4 @@
-/* Reset browser default spacing */
+/* Reset browser defaults */
 * {
   margin: 0;
   padding: 0;
@@ -10,13 +10,11 @@ html, body {
   height: 100%;
 }
 
-/* Page Background */
+/* Page Background - Benjamin Moore 2066-70 inspired */
 body {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
-
-  /* Benjamin Moore 2066-70 inspired */
   background-color: #DCE7F3;
 }
 
@@ -25,23 +23,21 @@ header {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #000000; /* pure black */
+  background-color: #000000;
   color: white;
 }
 
-/* Logo circle placeholder */
+/* Logo circle */
 .logo {
   width: 55px;
   height: 55px;
-  background-color: white; /* just placeholder until real image */
+  background-color: white;
   border-radius: 50%;
   margin-right: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  color: #4a4a4a;
-  overflow: hidden; /* so logo fits nicely when inserted */
+  overflow: hidden;
 }
 
 .logo img {
@@ -52,14 +48,14 @@ header {
 }
 
 /* Toolbar */
-.toolbar {
-  background-color: #6b6b6b; /* lighter gray */
+#toolbar {
+  background-color: #6b6b6b;
   padding: 10px 0;
   display: flex;
   justify-content: space-around;
 }
 
-.toolbar button {
+#toolbar button {
   background-color: #ffffff;
   border: 1px solid #ccc;
   padding: 10px 12px;
@@ -68,24 +64,31 @@ header {
   border-radius: 6px;
 }
 
-.toolbar button:hover {
+#toolbar button:hover {
   background-color: #e6e6e6;
 }
 
 /* Main Content Area */
-.content {
-  flex: 1; /* pushes footer down */
+main {
+  flex: 1;
   padding: 20px;
   text-align: center;
 }
 
+.content-box {
+  border: 1px solid lightgray;
+  padding: 20px;
+  min-height: 200px;
+  background-color: white;
+}
+
 /* Footer */
 footer {
-  background-color: #000000; /* pure black */
+  background-color: #000000;
   color: white;
   padding: 10px 15px;
   font-size: 14px;
   display: flex;
-  justify-content: center; /* center text horizontally */
+  justify-content: center;
   align-items: center;
 }
