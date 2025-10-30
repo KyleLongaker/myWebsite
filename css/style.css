@@ -10,11 +10,15 @@ html, body {
   height: 100%;
 }
 
+/* Page Background */
 body {
   display: flex;
   flex-direction: column;
   font-family: Arial, sans-serif;
-  background-color: white;
+
+  /* white with a soft blue tint */
+  background-color: #f4f8ff; 
+  /* this is a soft icy-blue white */
 }
 
 /* Header */
@@ -22,7 +26,7 @@ header {
   display: flex;
   align-items: center;
   padding: 20px;
-  background-color: #4a4a4a; /* darker gray */
+  background-color: #000000; /* pure black */
   color: white;
 }
 
@@ -78,11 +82,11 @@ header {
 
 /* Footer */
 footer {
-  background-color: #4a4a4a;
+  background-color: #000000; /* pure black */
   color: white;
   padding: 10px 15px;
   font-size: 14px;
   display: flex;
-  justify-content: flex-end; /* moves text to the right */
+  justify-content: center; /* center text horizontally */
   align-items: center;
 }
